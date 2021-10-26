@@ -1,0 +1,10 @@
+pages\BasePage.class
+steps\LoginSteps.class
+steps\MailBoxSteps.class
+pages\PasswordPage.class
+pages\LoginPage.class
+pages\MailBoxPage.class
+tests\SearchLettersTest.class
+tests\BaseTest.class
+utils\PropertyReader.class
+steps\PasswordSteps.class
