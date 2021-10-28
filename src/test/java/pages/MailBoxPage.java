@@ -21,50 +21,45 @@ public class MailBoxPage extends BasePage {
     private WebElement contentLetterField;
     @FindBy(css = "div.T-I.J-J5-Ji.aoO.v7.T-I-atl.L3")
     private WebElement sendLetterButton;
-    private final String  SELECTOR_INFO_ABOUT_SENDING = "div.vh span.aT";
+    private final String SELECTOR_INFO_ABOUT_SENDING = "div.vh span.aT";
 
-
-
-
-    public int countNeedThemesInWebElements(String themeForSearch){
-
+    public int countNeedThemesInWebElements(String themeForSearch) {
         int result = 0;
-        for (WebElement element:webElements){
-            if (element.getText().equals(themeForSearch)){
+        for (WebElement element : webElements) {
+            if (element.getText()
+                       .equals(themeForSearch)) {
                 result++;
             }
         }
         return result;
     }
 
-    public void clickWriteButton(){
+    public void clickWriteButton() {
         elementClick(writeButton);
     }
 
-    public void filltoWhomField(String address){
+    public void filltoWhomField(String address) {
         elementClick(toWhomLetterField);
-        pasteTextInElement(toWhomLetterField,address);
+        pasteTextInElement(toWhomLetterField, address);
         toWhomLetterField.sendKeys(Keys.ENTER);
-
     }
 
-    public void fillToThemeLetterField(String themeForLetter){
-
+    public void fillToThemeLetterField(String themeForLetter) {
         elementClick(themeLetterField);
         pasteTextInElement(themeLetterField, themeForLetter);
     }
 
-    public void fillToContentLetterField(String themeForSearch){
+    public void fillToContentLetterField(String themeForSearch) {
         String countNeedThemes = String.valueOf(countNeedThemesInWebElements(themeForSearch));
         elementClick(contentLetterField);
         pasteTextInElement(contentLetterField, countNeedThemes);
     }
-    public void clickSendLetterButton(){
+
+    public void clickSendLetterButton() {
         elementClick(sendLetterButton);
     }
-    public void waitInfoAboutSending(){
+
+    public void waitInfoAboutSending() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(SELECTOR_INFO_ABOUT_SENDING)));
     }
-
-
 }

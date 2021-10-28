@@ -9,12 +9,11 @@ public class PasswordPage extends BasePage {
     @FindBy(css = "button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.qIypjc.TrZEUc.lw1w4b")
     private WebElement nextPasswordPageButton;
 
-    public void fillPassword(String password){
-        pasteTextInElement(passwordField,password);
+    public void fillPassword(String password) {
+        pasteTextInElement(passwordField, password);
     }
 
-    public void clickNextButton(){
+    public void clickNextButton() {
         elementClick(nextPasswordPageButton);
     }
-
 }
