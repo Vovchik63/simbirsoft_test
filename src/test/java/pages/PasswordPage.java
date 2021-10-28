@@ -10,7 +10,7 @@ public class PasswordPage extends BasePage {
     private WebElement nextPasswordPageButton;
 
     public void fillPassword(String password) {
-        pasteTextInElement(passwordField, password);
+        fillTextInElement(passwordField, password);
     }
 
     public void clickNextButton() {

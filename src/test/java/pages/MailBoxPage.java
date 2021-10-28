@@ -40,19 +40,19 @@ public class MailBoxPage extends BasePage {
 
     public void filltoWhomField(String address) {
         elementClick(toWhomLetterField);
-        pasteTextInElement(toWhomLetterField, address);
+        fillTextInElement(toWhomLetterField, address);
         toWhomLetterField.sendKeys(Keys.ENTER);
     }
 
     public void fillToThemeLetterField(String themeForLetter) {
         elementClick(themeLetterField);
-        pasteTextInElement(themeLetterField, themeForLetter);
+        fillTextInElement(themeLetterField, themeForLetter);
     }
 
     public void fillToContentLetterField(String themeForSearch) {
         String countNeedThemes = String.valueOf(countNeedThemesInWebElements(themeForSearch));
         elementClick(contentLetterField);
-        pasteTextInElement(contentLetterField, countNeedThemes);
+        fillTextInElement(contentLetterField, countNeedThemes);
     }
 
     public void clickSendLetterButton() {

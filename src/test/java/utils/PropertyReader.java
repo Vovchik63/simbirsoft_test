@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertyReader {
+
     private static String getPropertyFromFile(String propertyName) {
         Properties properties = new Properties();
         try (InputStream inputStream = new FileInputStream("src/test/resources/framework.properties")) {

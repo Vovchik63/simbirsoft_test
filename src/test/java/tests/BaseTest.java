@@ -15,7 +15,6 @@ import java.net.URL;
 public class BaseTest {
     private static WebDriver driver;
     protected LoginSteps steps;
-    private Object LoginPage;
 
     public static WebDriver getDriver() {
         return driver;

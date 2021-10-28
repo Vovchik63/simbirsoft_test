@@ -3,7 +3,7 @@ package steps;
 import pages.MailBoxPage;
 
 public class MailBoxSteps {
-    MailBoxPage mailBoxPage = new MailBoxPage();
+    private MailBoxPage mailBoxPage = new MailBoxPage();
 
     public void executeGetCountThemesAndSendMessage(String address, String themeForLetter) {
         mailBoxPage.clickWriteButton();

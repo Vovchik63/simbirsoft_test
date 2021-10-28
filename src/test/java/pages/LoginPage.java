@@ -10,7 +10,7 @@ public class LoginPage extends BasePage {
     private WebElement nextLoginPageButton;
 
     public void fillLogin(String text) {
-        pasteTextInElement(loginField, text);
+        fillTextInElement(loginField, text);
     }
 
     public void clickNextLoginPageButton() {

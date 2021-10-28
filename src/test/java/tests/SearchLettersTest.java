@@ -5,10 +5,10 @@ import utils.PropertyReader;
 
 public class SearchLettersTest extends BaseTest {
     @Test
-    public void test() {
+    public void countLettersWithNeedThemesAndSendLetter() {
         String address = "selenium.test.simbirsoft@gmail.com";
         String theme = "Simbirsoft Тестовое задание";
-        steps.executFillLogin(PropertyReader.getLogin())
+        steps.executeFillLogin(PropertyReader.getLogin())
              .executeFillPasword(PropertyReader.getPassword())
              .executeGetCountThemesAndSendMessage(address, theme);
     }

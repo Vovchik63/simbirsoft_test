@@ -19,7 +19,7 @@ public class BasePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(150));
     }
 
-    public void pasteTextInElement(WebElement element, String text) {
+    public void fillTextInElement(WebElement element, String text) {
         elementClick(element);
         element.clear();
         element.sendKeys(text);
